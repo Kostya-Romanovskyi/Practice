@@ -1,0 +1,403 @@
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('Segoe UI.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Segoe UI Bold'), url('Segoe UI Bold.woff') format('woff');
+}
+
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*--------------------*/
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #BEB7D8;
+    margin-bottom: 115px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.header__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
+    flex-wrap: wrap;
+}
+
+.header__column {}
+
+.header__logo {
+    width: 150px;
+    height: 35px;
+}
+
+.nav__menu {}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+}
+
+.menu__list li {
+    margin-right: 50px;
+}
+
+.menu__list li:last-child {
+    margin-right: 0;
+}
+
+.menu__list li:nth-child(1) {
+    background: url('../Images/Icons/phone_icon.svg') left no-repeat;
+    padding-left: 20px;
+}
+
+.menu__list li:nth-child(2) {
+    background: url('/Images/Icons/Skype_icon.svg') left no-repeat;
+    padding-left: 20px;
+}
+
+.menu__list li:nth-child(3) {
+    background: url('../Images/Icons/telegram_icon.svg') left no-repeat;
+    padding-left: 20px;
+}
+
+.menu__link {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #383838;
+}
+
+.list__btn {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    background: #006BA7;
+    border-radius: 20px;
+    padding: 12px 25px;
+}
+
+/* ---------media--------- */
+@media(max-width:1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media(max-width:992px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .menu__list li {
+        margin-right: 20px;
+    }
+}
+
+@media(max-width:767px) {
+    .container {
+        max-width: none;
+    }
+}
+
+@media(max-width:681px) {
+    .header__items {
+        justify-content: center;
+    }
+
+    .header__column {
+        padding: 10px 0;
+    }
+
+    .menu__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .list__btn {}
+}
+
+@media(max-width:530px) {
+    .menu__list li:last-child {
+        padding: 20px 0px 0px 0px;
+    }
+}
+
+@media(max-width:353px) {
+    .menu__list {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu__list li {
+        padding: 5px 0;
+    }
+}
+
+/* ---------//media--------- */
+
+/* main ::content */
+.section__title {}
+
+.main__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__content {}
+
+.bg__img {
+    background: url('/Images/laptop.jpg') right no-repeat;
+    padding: 10px 0;
+}
+
+.main__title h1 {
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    /* font-size: 36px; */
+    font-size: calc(30px + 6 * (100vw / 1300));
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    color: #006BA7;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.main__subtitle {
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #383838;
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+.main__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px 0px 152px 0px;
+}
+
+.main__buttons button {
+    margin: 0px 10px 0px 10px;
+}
+
+@media(max-width:1200px) {
+    .main__buttons {
+        margin: 0px 0px 73px 0px;
+    }
+
+    .header {
+        margin-bottom: 72px;
+    }
+
+    .bg__img {
+        background: url('/Images/laptop.jpg') 100% 100% no-repeat;
+    }
+}
+
+@media(max-width:992px) {
+    .bg__img {
+        /* background: url('/Images/laptop.jpg') 127% 137% no-repeat; */
+    }
+}
+
+@media(max-width:501px) {
+    .header {
+        margin-bottom: 50px;
+    }
+
+    .main__buttons {
+        margin: 0px 0px 49px 0px;
+    }
+
+    .main__buttons button {
+        margin: 10px 10px;
+    }
+
+    .main__subtitle {
+        margin-bottom: 34px;
+    }
+
+    .main__buttons button {
+        box-shadow: 0 0 10px#2196f3, 0 0 40px#2196f3, 0 0 90px#2196f3;
+    }
+
+    .list__btn {
+        box-shadow: 0 0 10px#2196f3, 0 0 40px#2196f3, 0 0 90px#2196f3;
+    }
+}
+
+/* ///main ::content */
+
+/* section slex test  */
+.flex__test {
+    background-color: #BEB7D8;
+}
+
+.test__menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 72px 0px 123px 0px;
+}
+
+.test__items {
+    max-width: 336px;
+    padding: 10px 0;
+}
+
+.test__items p {
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #383838;
+}
+
+.test__items span {
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #383838;
+}
+
+@media(max-width:1200px) {
+    .test__menu {
+        padding: 20px 0;
+    }
+}
+
+/* //section slex test  */
+
+/* footer */
+.footer {
+    background: #383838;
+}
+
+.footer__content {
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 13px 0;
+}
+
+/* //footer */
